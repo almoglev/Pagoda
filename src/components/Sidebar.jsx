@@ -11,7 +11,7 @@ function Sidebar() {
         <div className='sidebar-content'>
             <div className="user">
                 {/* display avatar and user name here */}
-                <p>Hi user</p>
+                <p>Hello user</p>
             </div>
             <nav className="links">
                 <ul>
