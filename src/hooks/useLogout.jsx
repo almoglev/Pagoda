@@ -16,7 +16,8 @@ export const useLogout = () => {
 
         // Sign the user out
         try {
-            // change online to false in user document
+            
+            // Change online to false in user document
             const { uid } = user
             await projectFirestore.collection("users").doc(uid).update({ online: false })
 
