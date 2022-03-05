@@ -14,8 +14,8 @@ function Navbar() {
     <div className='navbar'>
         <ul>
             <li className="logo">
-                <img src={Temple} alt="pagoda logo" />
-                <span>Pagoda</span>
+              <img src={Temple} alt="pagoda logo" />
+              <span>Pagoda</span>
             </li>
 
             {!user && (
