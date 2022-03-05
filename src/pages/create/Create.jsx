@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Select from 'react-select'
 
 // styles
 import './Create.css'
