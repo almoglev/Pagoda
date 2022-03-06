@@ -41,7 +41,7 @@ export default function ProjectSummary({ project }) {
             <button className="btn" onClick={handleDelete}>Mark as Complete</button>
             <p className="complete-project">Notice: marking as complete will delete the project</p>
           </>
-        )}
+      )}
     </div>
   )
 }
