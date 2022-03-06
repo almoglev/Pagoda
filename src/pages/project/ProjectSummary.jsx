@@ -16,7 +16,7 @@ export default function ProjectSummary({ project }) {
   return (
 <div>
       <div className="project-summary">
-        <h2 className="page-title">{project.name}</h2>
+        <h2 className="page-title">{`${project.category} - ${project.name}`}</h2>
         <p className="due-date">
           Project due by {project.dueDate.toDate().toDateString()}
         </p>
@@ -36,7 +36,7 @@ export default function ProjectSummary({ project }) {
           ))}
         </div>   
       </div>
-      {user.uid == project.createdBy.id && (
+      {user.uid === project.createdBy.id && (
           <>
             <button className="btn" onClick={handleDelete}>Mark as Complete</button>
             <p className="complete-project">Notice: marking as complete will delete the project</p>

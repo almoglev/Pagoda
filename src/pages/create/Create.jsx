@@ -10,11 +10,11 @@ import { useHistory } from 'react-router-dom'
 import './Create.css'
 
 const categories = [
-  {value: 'rnd', label: "R&D"},
-  {value: 'design', label: "Design"},
-  {value: 'product', label: "Product"},
-  {value: 'bizdev', label: "BizDev"},
-  {value: 'operations', label: "Operations"},
+  {value: 'R&D', label: "R&D"},
+  {value: 'Design', label: "Design"},
+  {value: 'Product', label: "Product"},
+  {value: 'BizDev', label: "BizDev"},
+  {value: 'Operations', label: "Operations"},
 ]
 
 export default function Create() {

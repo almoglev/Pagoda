@@ -1,13 +1,9 @@
-import { useState } from "react"
-
 const  filterList = ['All', 'Mine', 'R&D', 'Design', 'Product', 'BizDev', 'Operations']
 
-export default function ProjectFilter() {
-    const [currFilter, setCurrFilter] = useState('All')
+export default function ProjectFilter({ currFilter, changeFilter }) {
 
     const handleClick = (f) => {
-        console.log(f)
-        setCurrFilter(f)
+        changeFilter(f)
     }
 
   return (
@@ -17,7 +13,7 @@ export default function ProjectFilter() {
             {filterList.map((f) => (
                 <button key={f}
                     onClick={() => handleClick(f)}
-                    className={currFilter == f ? 'active' : ''}
+                    className={currFilter === f ? 'active' : ''}
                 >
                     {f}
                 </button>
