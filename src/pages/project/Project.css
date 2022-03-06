@@ -37,6 +37,11 @@
   .project-summary + .btn {
     margin-top: 20px;
   }
+  .complete-project {
+    color: rgb(255, 72, 72);
+    padding: 8px;
+    font-size: 1em;
+  }
 
   /* project comments */
   .project-comments label {
