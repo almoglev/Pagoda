@@ -1,6 +1,18 @@
 import Avatar from "../../components/Avatar"
+import { useFirestore } from "../../hooks/useFirestore"
+import { useAuthContext } from "../../hooks/useAuthContext"
+import { useHistory } from "react-router-dom"
 
 export default function ProjectSummary({ project }) {
+    const { deleteDocument } = useFirestore('projects')
+    const { user } = useAuthContext()
+    const history = useHistory()
+
+    const handleDelete = (e) => {
+        deleteDocument(project.id)
+        history.push('/')
+    }
+  
   return (
 <div>
       <div className="project-summary">
@@ -22,8 +34,11 @@ export default function ProjectSummary({ project }) {
               <Avatar src={user.photoURL} name={user.displayName} />
             </div>
           ))}
-        </div>
+        </div>   
       </div>
+      {user.uid == project.createdBy.id && (
+            <button className="btn" onClick={handleDelete}>Mark as Complete</button>
+        )}
     </div>
   )
 }
