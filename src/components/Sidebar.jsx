@@ -13,7 +13,7 @@ function Sidebar() {
     <div className='sidebar'>
         <div className='sidebar-content'>
             <div className="user">
-                <Avatar src={user.photoURL}/>
+                <Avatar src={user.photoURL} />
                 <p>Hello, {user.displayName}</p>
             </div>
             <nav className="links">
